@@ -10,3 +10,12 @@ class Books(models.Model):
 
     def __str__(self):
         return self.book_name + "  ----  " + self.book_title
+
+
+class Students(models.Model):
+    student_name = models.CharField(max_length=50)
+    student_age = models.PositiveIntegerField()
+    student_dob = models.DateField()
+
+    def __str__(self) -> str:
+        return super().__str__().student_name

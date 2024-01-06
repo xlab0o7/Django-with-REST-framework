@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from rest_framework import generics, viewsets
 
-from DRF_App.models import Books
-from DRF_App.serializers import BooksSerializer
+from DRF_App.models import Books, Students
+from DRF_App.serializers import BooksSerializer, StudentSerialier
 
 # Create your views here.
 
@@ -20,3 +20,8 @@ from DRF_App.serializers import BooksSerializer
 class Books(viewsets.ModelViewSet):
     queryset = Books.objects.all()
     serializer_class = BooksSerializer
+
+
+class Student(viewsets.ModelViewSet):
+    queryset = Students.objects.all()
+    serializer_class = StudentSerialier
