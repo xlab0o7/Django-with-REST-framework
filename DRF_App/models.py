@@ -9,7 +9,7 @@ class Books(models.Model):
     book_title = models.CharField(max_length=150)
 
     def __str__(self):
-        return self.book_name + "  ----  " + self.book_title
+        return self.book_name + '  |  ' + self.book_title
 
 
 class Students(models.Model):
@@ -18,4 +18,4 @@ class Students(models.Model):
     student_dob = models.DateField()
 
     def __str__(self) -> str:
-        return super().__str__().student_name
+        return self.student_name
