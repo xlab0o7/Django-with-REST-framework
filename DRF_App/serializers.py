@@ -5,11 +5,11 @@ from .models import Books, Students
 class BooksSerializer(serializers.ModelSerializer):
     class Meta:
         model = Books
-        fields = (
-            'book_id',
-            'book_name',
-            'book_title',
-        )
+        fields = "__all__"
+
+        # (
+        #     'book_id', 'book_name', 'book_title',
+        # )
 
 
 class StudentSerialier(serializers.ModelSerializer):
